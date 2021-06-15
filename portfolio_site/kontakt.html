@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Kontakt</title>
+<link rel="stylesheet" type="text/css" href="portfolio.css"> 
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+	
+	<div id="wrapper">
+	<nav>
+		<img id="topimg" src="images/me4.png" alt="me">
+		<a class="toplinks" href="index.html" id="sites">Sites</a>
+		<a class="toplinks" href="ommig.html" id="ommig">Om Mig</a>
+		<a class="toplinks" href="gallery.html" id="gallery">Gallery</a>
+		<a class="toplinks" id="kontakt">Kontakt</a>
+	</nav>
+		
+		
+		
+		
+		
+		<form id="form1" action="tak.html" onsubmit="return valider(this)" method="post">
+		<input class="input navn" placeholder="Fornavn og efternavn" type="text" name="navn">
+		<input class="input email" placeholder="E-mail" type="text" name="email">
+		<input class="input tlf" placeholder="TLF" type="text" name="tlf">
+		<textarea class="input message" rows="4" cols="50" placeholder="skriv en besked" type="text" name="message"></textarea>
+		<input class="readmore" type="submit" value="Send">
+    <div id="message"></div>
+</form>
+		
+		<img id="thatguy" src="images/left_guy.png" alt="guy left">
+		<img id="thatkid" src="images/that_kid.jpg" alt="kid left">
+		<img id="thatgirl" src="images/that_girl.jpg" alt="girl left">
+		
+		
+		
+		
+		
+		
+		
+		<footer id="sitefoot">
+			<a target="_blank" id="twitter" class="fab" href="https://twitter.com/Neo_Ruby_Rose"><i class="fa-twitter"></i></a>
+			<a target="_blank" id="insta" class="fab" href="https://www.instagram.com/neo_ruby_rose/?hl=da"><i class="fa-instagram"></i></a>
+			<a target="_blank" id="facebook" class="fab" href="https://www.facebook.com/adrianm101"><i class="fa-facebook-f"></i></a>
+			<a target="_blank" id="linked-in" class="fab" href="https://www.linkedin.com/in/adrian-madsen-bb199a170/"><i class="fa-linkedin-in"></i></a>
+		</footer>
+	
+	
+	
+	</div>
+<script>
+var message = document.querySelector("#message");
+function valider(z){
+	
+	if(z.navn.value==""){
+		message.innerHTML="Angiv navn";
+		z.navn.focus();
+		return false;
+	}
+	if(z.email.value===""){
+		message.innerHTML="Angiv e-mail";
+		z.email.focus();
+		return false;
+	}	
+	if(z.tlf.value===""){
+		message.innerHTML="Angiv telefon nummer";
+		z.tlf.focus();
+		return false;
+	}	
+	if(z.message.value===""){
+		message.innerHTML="Angiv besked";
+		z.message.focus();
+		return false;
+	}	
+	return true;
+}
+	
+</script>
+</body>
+</html>
+
